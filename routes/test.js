@@ -58,7 +58,7 @@ router.get('/test', (req, res) => {
  *                   type: string
  *                   example: Hello, World!
  */
-router.post('/echo', (req, res) => {
+router.post('/test/echo', (req, res) => {
     const { message } = req.body;
     console.log(`Received message: ${message}`);
     res.json({ echoedMessage: message });
