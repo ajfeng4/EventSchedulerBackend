@@ -1,4 +1,3 @@
-// routes/test.js
 const express = require('express');
 const router = express.Router();
 
@@ -13,7 +12,7 @@ const router = express.Router();
  * @swagger
  * /api/test:
  *   get:
- *     summary: Get a test message
+ *     summary: Retrieve a test message
  *     tags: [Test]
  *     responses:
  *       200:
@@ -61,6 +60,7 @@ router.get('/test', (req, res) => {
  */
 router.post('/echo', (req, res) => {
     const { message } = req.body;
+    console.log(`Received message: ${message}`);
     res.json({ echoedMessage: message });
 });
 
